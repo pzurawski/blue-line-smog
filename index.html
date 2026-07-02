@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Line Smog | BAR Licensed Smog Inspections – Antioch, CA</title>
+<meta name="description" content="BAR licensed, STAR certified smog inspection station at 225 E 18th St, Antioch, CA. $49.99 flat rate, test only, no repairs, walk-ins welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:root{
+  --navy:#0A2550;--navy2:#0D2E60;--gold:#E8B830;--gold2:#D4A420;
+  --white:#FFFFFF;--off:#F7F6F2;--muted:#6B7280;--border:#E5E7EB;
+  --text:#111827;--sans:'Inter',system-ui,sans-serif;
+  --display:'Barlow Condensed',sans-serif;--radius:10px;--radius-lg:14px;
+}
+body{font-family:var(--sans);font-size:16px;color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden}
+@keyframes flyLeft{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:translateX(0)}}
+@keyframes flyRight{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+@keyframes pulse{0%,100%{text-shadow:0 0 0 rgba(232,184,48,0)}50%{text-shadow:0 0 24px rgba(232,184,48,.45)}}
+@keyframes trustSlide{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+.anim-left{opacity:0}
+.anim-right{opacity:0}
+.anim-up{opacity:0}
+.anim-scale{opacity:0}
+.anim-left.in-view{animation:flyLeft .65s cubic-bezier(.22,.68,0,1.2) forwards}
+.anim-right.in-view{animation:flyRight .65s cubic-bezier(.22,.68,0,1.2) forwards}
+.anim-up.in-view{animation:fadeUp .6s cubic-bezier(.22,.68,0,1.2) forwards}
+.anim-scale.in-view{animation:scaleIn .55s cubic-bezier(.22,.68,0,1.2) forwards}
+.delay-1{animation-delay:.1s!important}
+.delay-2{animation-delay:.2s!important}
+.delay-3{animation-delay:.3s!important}
+.delay-4{animation-delay:.4s!important}
+.delay-5{animation-delay:.5s!important}
+.delay-6{animation-delay:.6s!important}
+@media(prefers-reduced-motion:reduce){.anim-left,.anim-right,.anim-up,.anim-scale{opacity:1!important;animation:none!important}}
+.nav{background:var(--navy);padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:2px solid var(--gold)}
+.nav-logo{font-family:var(--display);font-size:1.45rem;font-weight:700;color:var(--white);letter-spacing:.03em}
+.nav-logo span{color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-badge{font-size:.72rem;font-weight:600;color:var(--gold);letter-spacing:.04em;display:none}
+.nav-social{display:flex;gap:.5rem;align-items:center}
+.nav-social a{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:5px;background:rgba(255,255,255,.1);transition:background .15s}
+.nav-social a:hover{background:rgba(232,184,48,.25)}
+.nav-social svg{width:15px;height:15px;fill:rgba(255,255,255,.75)}
+.nav-cta{background:var(--gold);color:var(--navy);font-weight:600;font-size:.85rem;padding:.5rem 1.25rem;border-radius:6px;white-space:nowrap}
+.nav-cta:hover{background:var(--gold2)}
+@media(min-width:600px){.nav-badge{display:block}}
+.hero{position:relative;min-height:540px;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,37,80,.92) 0%,rgba(10,37,80,.78) 55%,rgba(10,37,80,.5) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:4rem 2rem;width:100%}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(232,184,48,.18);border:1px solid rgba(232,184,48,.5);color:var(--gold);font-size:.72rem;font-weight:600;letter-spacing:.08em;padding:.35rem .9rem;border-radius:20px;margin-bottom:1.25rem;animation:fadeUp .6s .1s cubic-bezier(.22,.68,0,1.2) both}
+.hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.hero h1{font-family:var(--display);font-size:clamp(2.4rem,6vw,4rem);font-weight:700;color:var(--white);line-height:1.05;letter-spacing:.01em;margin-bottom:1rem;max-width:680px;animation:flyLeft .7s .25s cubic-bezier(.22,.68,0,1.2) both}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.78);max-width:500px;margin-bottom:2rem;line-height:1.65;animation:fadeUp .6s .4s cubic-bezier(.22,.68,0,1.2) both}
+.hero-price-row{display:flex;align-items:flex-end;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap;animation:fadeUp .6s .5s cubic-bezier(.22,.68,0,1.2) both}
+.hero-price-box{background:rgba(232,184,48,.14);border:1.5px solid var(--gold);border-radius:var(--radius);padding:.9rem 1.5rem;text-align:center}
+.hero-price-amt{font-family:var(--display);font-size:3.2rem;font-weight:700;color:var(--gold);line-height:1;animation:pulse 3s 1.5s ease-in-out infinite}
+.hero-price-amt sup{font-size:1.4rem;vertical-align:super}
+.hero-price-note{font-size:.72rem;color:rgba(255,255,255,.55);margin-top:.2rem}
+.hero-bullets{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.hero-bullets li{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:rgba(255,255,255,.85)}
+.hero-bullets li::before{content:'✓';font-weight:700;color:var(--gold);font-size:.85rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp .6s .65s cubic-bezier(.22,.68,0,1.2) both}
+.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.8rem 1.75rem;border-radius:var(--radius);transition:background .15s,transform .15s}
+.btn-primary:hover{background:var(--gold2);transform:translateY(-1px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--white);font-weight:500;font-size:.9rem;padding:.8rem 1.5rem;border-radius:var(--radius);border:1px solid rgba(255,255,255,.35);transition:border-color .15s,background .15s}
+.btn-ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.06)}
+.trust-strip{background:var(--gold);padding:.6rem 2rem;text-align:center;overflow:hidden}
+.trust-strip-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.5rem}
+.trust-item{font-size:.78rem;font-weight:700;color:var(--navy);letter-spacing:.03em;display:flex;align-items:center;gap:.35rem;animation:trustSlide .4s both}
+.trust-dot{width:5px;height:5px;border-radius:50%;background:var(--navy);opacity:.35}
+.section{max-width:1100px;margin:0 auto;padding:3.5rem 2rem}
+.section-sm{padding:2.5rem 2rem}
+.sec-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;color:var(--gold2);text-transform:uppercase;margin-bottom:.5rem}
+.sec-title{font-family:var(--display);font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:700;color:var(--navy);line-height:1.1;margin-bottom:.75rem}
+.sec-sub{color:var(--muted);font-size:.95rem;max-width:580px;line-height:1.65}
+.divider{width:0;height:3px;background:var(--gold);border-radius:2px;margin:.75rem 0 1.5rem;transition:width .6s .2s ease}
+.divider.in-view{width:3rem}
+.photo-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin-bottom:3rem}
+.photo-card{position:relative;border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;background:var(--navy2)}
+.photo-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.photo-card:hover img{transform:scale(1.04)}
+.photo-card-cap{position:absolute;bottom:0;left:0;right:0;background:rgba(10,37,80,.88);padding:.55rem .85rem;font-size:.75rem;font-weight:600;color:var(--gold);letter-spacing:.03em}
+@media(max-width:600px){.photo-row{grid-template-columns:1fr 1fr}.photo-row .photo-card:nth-child(n+3){display:none}}
+.process-bg{background:var(--navy)}
+.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:rgba(255,255,255,.08);border-radius:var(--radius-lg);overflow:hidden;margin-top:2rem}
+.p-step{background:var(--navy2);padding:1.75rem 1.5rem;position:relative;transition:background .2s}
+.p-step:hover{background:#0f3470}
+.p-num{font-family:var(--display);font-size:2.8rem;font-weight:700;color:rgba(232,184,48,.2);line-height:1;margin-bottom:.5rem}
+.p-icon{font-size:1.5rem;margin-bottom:.75rem}
+.p-title{font-weight:600;font-size:.95rem;color:var(--white);margin-bottom:.4rem}
+.p-desc{font-size:.82rem;color:rgba(255,255,255,.58);line-height:1.55}
+.p-arrow{position:absolute;right:-10px;top:50%;transform:translateY(-50%);width:20px;height:20px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2;font-size:.7rem;color:var(--navy);font-weight:700}
+.p-step:last-child .p-arrow{display:none}
+.process-time{text-align:center;margin-top:1.25rem;font-size:.82rem;color:rgba(255,255,255,.45)}
+.process-time strong{color:var(--gold);font-weight:600}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:2rem}
+.svc-card{background:var(--off);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;transition:border-color .2s,transform .2s,box-shadow .2s}
+.svc-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 8px 24px rgba(10,37,80,.1)}
+.svc-icon{width:44px;height:44px;background:var(--navy);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.2rem}
+.svc-title{font-weight:600;font-size:.95rem;color:var(--navy);margin-bottom:.4rem}
+.svc-desc{font-size:.82rem;color:var(--muted);line-height:1.6}
+.coupon-section{background:var(--off)}
+.coupon{display:flex;border:2px dashed var(--gold);border-radius:var(--radius-lg);overflow:hidden;background:var(--navy);max-width:700px;margin:0 auto;transition:box-shadow .3s}
+.coupon:hover{box-shadow:0 0 0 4px rgba(232,184,48,.2)}
+.coupon-left{flex:1;padding:2rem}
+.coupon-tag{font-size:.68rem;font-weight:700;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem}
+.coupon-heading{font-family:var(--display);font-size:2.4rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:.5rem}
+.coupon-body{font-size:.88rem;color:rgba(255,255,255,.7);margin-bottom:1.1rem;line-height:1.55}
+.coupon-barcode{display:flex;gap:2px;margin-bottom:.65rem;align-items:flex-end}
+.coupon-barcode span{background:var(--gold);border-radius:1px;opacity:.8}
+.coupon-fine{font-size:.68rem;color:rgba(255,255,255,.3);line-height:1.5}
+.coupon-right{width:130px;min-width:130px;background:var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.5rem 1rem;gap:.25rem;border-left:2px dashed var(--navy)}
+.coupon-save-lbl{font-size:.68rem;font-weight:700;color:var(--navy);letter-spacing:.08em;text-transform:uppercase}
+.coupon-amt{font-family:var(--display);font-size:3rem;font-weight:700;color:var(--navy);line-height:1}
+.coupon-amt-lbl{font-size:.72rem;font-weight:600;color:var(--navy);text-align:center;line-height:1.3}
+.coupon-logo{margin-top:.9rem;border-top:1.5px dashed rgba(10,37,80,.3);padding-top:.7rem;font-family:var(--display);font-size:.78rem;font-weight:700;color:var(--navy);text-align:center;letter-spacing:.04em;line-height:1.3}
+@media(max-width:480px){.coupon{flex-direction:column}.coupon-right{width:100%;min-width:unset;flex-direction:row;border-left:none;border-top:2px dashed var(--navy);padding:1rem 1.5rem;justify-content:space-around}.coupon-logo{display:none}}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:2rem}
+.why-item{display:flex;gap:1rem;padding:1.25rem;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);transition:border-color .2s,box-shadow .2s}
+.why-item:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(10,37,80,.08)}
+.why-icon{width:38px;height:38px;min-width:38px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-top:.1rem}
+.why-title{font-weight:600;font-size:.9rem;color:var(--navy);margin-bottom:.3rem}
+.why-desc{font-size:.8rem;color:var(--muted);line-height:1.6}
+.info-bg{background:var(--off)}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:2rem}
+@media(max-width:560px){.info-grid{grid-template-columns:1fr}}
+.info-box{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem}
+.info-box-title{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid var(--border)}
+.info-row{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:.75rem;font-size:.88rem}
+.info-row:last-child{margin-bottom:0}
+.info-icon{width:28px;height:28px;min-width:28px;background:var(--navy);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.info-label{font-size:.72rem;color:var(--muted)}
+.info-val{font-weight:500;color:var(--text)}
+.info-link{color:var(--navy);text-decoration:underline;font-size:.82rem}
+.social-row{display:flex;gap:.5rem;margin-top:.4rem;flex-wrap:wrap}
+.social-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .75rem;border-radius:6px;font-size:.78rem;font-weight:600;transition:opacity .15s,transform .15s}
+.social-btn:hover{opacity:.85;transform:translateY(-1px)}
+.social-btn svg{width:14px;height:14px;fill:currentColor;flex-shrink:0}
+.social-btn.yelp{background:#d32323;color:#fff}
+.social-btn.facebook{background:#1877f2;color:#fff}
+.hours-table{width:100%;border-collapse:collapse}
+.hours-table tr{border-bottom:1px solid var(--border)}
+.hours-table tr:last-child{border-bottom:none}
+.hours-table td{padding:.45rem 0;font-size:.85rem}
+.hours-table td:first-child{color:var(--muted)}
+.hours-table td:last-child{text-align:right;font-weight:500}
+.hours-table tr.today td{color:var(--navy);font-weight:700}
+.hours-table tr.today td:first-child::after{content:' ◄';font-size:.65rem;color:var(--gold)}
+.badge-strip{background:var(--navy);padding:1rem 2rem}
+.badge-strip-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:.35rem .9rem;font-size:.75rem;font-weight:600;color:rgba(255,255,255,.8);letter-spacing:.02em;transition:background .15s}
+.badge:hover{background:rgba(232,184,48,.15)}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.final-cta{position:relative;overflow:hidden;text-align:center}
+.final-cta-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.18}
+.final-cta-overlay{position:absolute;inset:0;background:var(--navy)}
+.final-cta-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:4rem 2rem}
+.final-cta h2{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:var(--white);margin-bottom:.6rem;letter-spacing:.01em}
+.final-cta p{font-size:.95rem;color:rgba(255,255,255,.6);margin-bottom:2rem;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.65}
+.final-cta-phone{font-family:var(--display);font-size:2.4rem;font-weight:700;color:var(--gold);display:block;margin-bottom:1.5rem;letter-spacing:.02em;transition:opacity .15s}
+.final-cta-phone:hover{opacity:.85}
+.final-cta .btn-primary{font-size:1.05rem;padding:.9rem 2.2rem}
+.social-footer{background:#0a1828;padding:1rem 2rem;text-align:center}
+.social-footer-inner{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap}
+.social-footer-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.1rem;border-radius:8px;font-size:.82rem;font-weight:600;transition:opacity .15s,transform .15s}
+.social-footer-btn:hover{opacity:.85;transform:translateY(-1px)}
+.social-footer-btn svg{width:16px;height:16px;fill:currentColor}
+.social-footer-btn.yelp{background:#d32323;color:#fff}
+.social-footer-btn.facebook{background:#1877f2;color:#fff}
+.social-footer-btn.maps{background:#34a853;color:#fff}
+footer{background:#060F1E;padding:1.25rem 2rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;font-size:.75rem;color:rgba(255,255,255,.35)}
+.footer-links{display:flex;gap:1rem;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,.4);transition:color .15s}
+.footer-links a:hover{color:var(--gold)}
+.notice{background:#fff3cd;border-bottom:2px solid var(--gold);padding:.55rem 2rem;text-align:center;font-size:.8rem;color:#7a5200;font-weight:500}
+.notice-close{cursor:pointer;margin-left:.75rem;font-weight:700;opacity:.5}
+.notice-close:hover{opacity:1}
+@media(max-width:480px){.hero h1{font-size:2.2rem}.nav-cta{padding:.45rem 1rem;font-size:.8rem}.p-step{padding:1.25rem 1rem}}
+.fcf-credit{position:fixed;bottom:14px;right:16px;z-index:999;opacity:.35;transition:opacity .2s}
+.fcf-credit:hover{opacity:.7}
+.fcf-credit a{font-family:var(--display);font-size:.72rem;font-weight:700;letter-spacing:.12em;color:#888;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="notice" id="ownerNotice">
+  ⚠️ <strong>Owner:</strong> Add your BAR license number to the footer before publishing, then delete this bar.
+  <span class="notice-close" onclick="document.getElementById('ownerNotice').remove()">✕</span>
+</div>
+<nav class="nav">
+  <div class="nav-logo">Blue Line <span>Smog</span></div>
+  <div class="nav-right">
+    <span class="nav-badge">BAR Licensed · STAR Certified</span>
+    <div class="nav-social">
+      <a href="https://www.yelp.com/biz/blue-line-smog-antioch?override_cta=Get+pricing+%26+availability&ylpcid=09668748934f4f9984eafc732bfbc21b5a8dcf26" target="_blank" rel="noopener" title="Yelp reviews" aria-label="Yelp"><svg viewBox="0 0 24 24"><path d="M20.16 12.73l-4.7 1.18a1.27 1.27 0 0 1-1.52-1.63l1.8-4.55a.6.6 0 0 1 .92-.28c1.58 1.1 4.47 3.57 4.13 4.57a.6.6 0 0 1-.63.71zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.16 15.34c-.3.9-2.06 1.55-3.07 1.63a.6.6 0 0 1-.63-.55l-.36-4.86a1.27 1.27 0 0 1 2.08-.94l2.4 3.87a.6.6 0 0 1-.42.85zm-8.55.42c-1-.12-2.68-.9-2.9-1.82a.6.6 0 0 1 .36-.7l4.42-1.65a1.27 1.27 0 0 1 1.62 1.52l-1.1 2.97a.6.6 0 0 1-.7.37 8.85 8.85 0 0 1-1.7-.69zm-1.75-7.17c.35-1 3.2-3.4 4.77-4.44a.6.6 0 0 1 .9.3l1.65 4.6a1.27 1.27 0 0 1-1.56 1.6L6.05 11.3a.6.6 0 0 1-.19-.71z"/></svg></a>
+      <a href="https://www.facebook.com/people/Blueline-Smog/61590550242968/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.955.93-1.955 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+    </div>
+    <a href="tel:+19254450970" class="nav-cta">📞 (925) 445-0970</a>
+  </div>
+</nav>
+<section class="hero">
+  <img class="hero-bg" src="images/hero-bg.jpg" alt="Classic Chevy Nova with exhaust smoke billowing from dual pipes in a smog inspection bay">
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">BAR Licensed &nbsp;·&nbsp; STAR Certified &nbsp;·&nbsp; Antioch, CA</div>
+    <h1>Honest smog checks.<br><em>No repairs. No runaround.</em></h1>
+    <p class="hero-sub">Test-only station with one job: get you legal and back on the road. Flat rate, no surprises, results go straight to the DMV.</p>
+    <div class="hero-price-row">
+      <div class="hero-price-box">
+        <div class="hero-price-amt">$49<sup>.99</sup></div>
+        <div class="hero-price-note">Out the door · test + certificate</div>
+      </div>
+      <ul class="hero-bullets">
+        <li>No appointment needed</li>
+        <li>Walk-ins always welcome</li>
+        <li>Usually done in 20–30 minutes</li>
+        <li>Certificate printed on the spot</li>
+      </ul>
+    </div>
+    <div class="hero-actions">
+      <a href="tel:+19254450970" class="btn-primary">📞 (925) 445-0970</a>
+      <a href="#hours" class="btn-ghost">Hours &amp; location ↓</a>
+    </div>
+  </div>
+</section>
+<div class="trust-strip"><div class="trust-strip-inner"><span class="trust-item" style="animation-delay:.05s">✓ BAR Licensed</span><span class="trust-dot"></span><span class="trust-item" style="animation-delay:.1s">✓ STAR Certified</span><span class="trust-dot"></span><span class="trust-item" style="animation-delay:.15s">✓ Test Only — We Don't Do Repairs</span><span class="trust-dot"></span><span class="trust-item" style="animation-delay:.2s">✓ Electronic DMV Reporting</span><span class="trust-dot"></span><span class="trust-item" style="animation-delay:.25s">✓ Walk-ins Welcome</span></div></div>
+<div>
+  <div class="section" style="padding-bottom:1rem">
+    <div class="sec-label anim-left">The process</div>
+    <h2 class="sec-title anim-left delay-1">In and out in under 30 minutes</h2>
+    <div class="divider anim-up delay-2"></div>
+    <p class="sec-sub anim-right delay-2">No appointment, no games. Pull up, we scan, you're done and on your way.</p>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;padding:0 2rem 2rem">
+    <div class="photo-row">
+      <div class="photo-card anim-up delay-1"><img src="images/nova-smoke.jpg" alt="Classic muscle car with exhaust smoke" loading="lazy"><div class="photo-card-cap">Why smog tests matter</div></div>
+      <div class="photo-card anim-up delay-2"><img src="images/nova-obd.jpg" alt="Innova 3120 smog check scanner" loading="lazy"><div class="photo-card-cap">OBD-II smog check scan</div></div>
+      <div class="photo-card anim-up delay-3"><img src="images/nova-dyno.jpg" alt="Chevy Nova on chassis dyno" loading="lazy"><div class="photo-card-cap">Chassis dyno &amp; emissions run</div></div>
+      <div class="photo-card anim-up delay-4"><img src="images/dyno-obd-smoke.jpg" alt="Scanner on dyno floor with exhaust smoke" loading="lazy"><div class="photo-card-cap">Scanner + dyno = full picture</div></div>
+    </div>
+  </div>
+  <div class="process-bg"><div class="section section-sm"><div class="process-grid">
+    <div class="p-step anim-up delay-1"><div class="p-num">01</div><div class="p-icon">🚗</div><div class="p-title">Drive in</div><div class="p-desc">No appointment needed. Walk-ins are always welcome any time during business hours.</div><div class="p-arrow">›</div></div>
+    <div class="p-step anim-up delay-2"><div class="p-num">02</div><div class="p-icon">🔌</div><div class="p-title">We connect &amp; scan</div><div class="p-desc">Our technician plugs in the OBD scanner and reads your vehicle's emissions data in minutes.</div><div class="p-arrow">›</div></div>
+    <div class="p-step anim-up delay-3"><div class="p-num">03</div><div class="p-icon">📋</div><div class="p-title">Results &amp; certificate</div><div class="p-desc">Pass or fail, you get a printed certificate on the spot. Usually 20–30 minutes total.</div><div class="p-arrow">›</div></div>
+    <div class="p-step anim-up delay-4"><div class="p-num">04</div><div class="p-icon">🏗</div><div class="p-title">DMV is notified</div><div class="p-desc">We report electronically. Nothing to mail, nothing to drop off yourself.</div></div>
+  </div><div class="process-time">Average time start to finish: <strong>20–30 minutes</strong></div></div></div>
+</div>
+<div>
+  <div class="section" style="padding-bottom:1rem"><div class="sec-label anim-right">What we test</div><h2 class="sec-title anim-right delay-1">All standard smog inspections</h2><div class="divider anim-up delay-2"></div></div>
+  <div style="max-width:1100px;margin:0 auto;padding:0 2rem 3.5rem"><div class="services-grid">
+    <div class="svc-card anim-up delay-1"><div class="svc-icon">📄</div><div class="svc-title">DMV registration renewal</div><div class="svc-desc">Standard biennial smog test required to renew your California vehicle registration.</div></div>
+    <div class="svc-card anim-up delay-2"><div class="svc-icon">🔄</div><div class="svc-title">Change of ownership</div><div class="svc-desc">Smog certification required when buying or selling a used vehicle in California.</div></div>
+    <div class="svc-card anim-up delay-3"><div class="svc-icon">⭐</div><div class="svc-title">STAR station testing</div><div class="svc-desc">STAR-certified for vehicles directed by the DMV to test at a STAR-designated station.</div></div>
+    <div class="svc-card anim-up delay-4"><div class="svc-icon">🚛</div><div class="svc-title">All gasoline vehicles</div><div class="svc-desc">Cars, trucks, SUVs, and most gasoline-powered vehicles. Call ahead for diesels, RVs, or heavy vehicles.</div></div>
+  </div></div>
+</div>
+<div class="coupon-section"><div class="section">
+  <div class="sec-label anim-left">Save money</div><h2 class="sec-title anim-left delay-1">Grab this coupon</h2><div class="divider anim-up delay-2"></div>
+  <p class="sec-sub anim-right delay-2" style="margin-bottom:2rem">Print it, screenshot it, or just show your phone at the counter.</p>
+  <div class="coupon anim-scale delay-3">
+    <div class="coupon-left"><div class="coupon-tag">📢 Present this coupon at time of service</div><div class="coupon-heading">$10 off<br>your smog test</div><p class="coupon-body">Walk in any time during business hours. No appointment required. One coupon per vehicle.</p><div class="coupon-barcode" id="barcode" aria-hidden="true"></div><p class="coupon-fine">Valid at Blue Line Smog · 225 E 18th St, Antioch, CA 94509 · One per vehicle · Not combinable with other offers · No cash value</p></div>
+    <div class="coupon-right"><div class="coupon-save-lbl">Save</div><div class="coupon-amt">$10</div><div class="coupon-amt-lbl">smog test<br>discount</div><div class="coupon-logo">BLUE LINE<br>SMOG</div></div>
+  </div>
+</div></div>
+<div><div class="section">
+  <div class="sec-label anim-left">Why choose us</div><h2 class="sec-title anim-left delay-1">A test-only station has one goal:<br>get you through</h2><div class="divider anim-up delay-2"></div>
+  <div class="why-grid">
+    <div class="why-item anim-left delay-1"><div class="why-icon">🚫</div><div class="why-text"><div class="why-title">We don't do repairs</div><div class="why-desc">Zero financial incentive to fail your vehicle. Our only job is an honest result.</div></div></div>
+    <div class="why-item anim-right delay-1"><div class="why-icon">💰</div><div class="why-text"><div class="why-title">Flat $49.99 — no surprises</div><div class="why-desc">No hidden fees. The smog test and DMV certificate are both included.</div></div></div>
+    <div class="why-item anim-left delay-2"><div class="why-icon">🏅</div><div class="why-text"><div class="why-title">BAR licensed &amp; STAR certified</div><div class="why-desc">All inspectors hold current California Bureau of Automotive Repair credentials.</div></div></div>
+    <div class="why-item anim-right delay-2"><div class="why-icon">🏗</div><div class="why-text"><div class="why-title">DMV gets the results — not you</div><div class="why-desc">We report electronically. Nothing to mail, drop off, or keep track of.</div></div></div>
+    <div class="why-item anim-left delay-3"><div class="why-icon">🚶</div><div class="why-text"><div class="why-title">Always walk-in friendly</div><div class="why-desc">No scheduling, no booking. Pull up any time during business hours.</div></div></div>
+    <div class="why-item anim-right delay-3"><div class="why-icon">📍</div><div class="why-text"><div class="why-title">Locally owned in Antioch</div><div class="why-desc">Independent station serving Antioch and East Contra Costa County.</div></div></div>
+  </div>
+</div></div>
+<div class="info-bg" id="hours"><div class="section">
+  <div class="sec-label anim-right">Find us</div><h2 class="sec-title anim-right delay-1">Hours &amp; location</h2><div class="divider anim-up delay-2"></div>
+  <div class="info-grid">
+    <div class="info-box anim-left delay-2">
+      <div class="info-box-title">Contact &amp; address</div>
+      <div class="info-row"><div class="info-icon">📞</div><div><div class="info-label">Phone</div><div class="info-val"><a href="tel:+19254450970" style="color:var(--navy);font-weight:600">(925) 445-0970</a></div></div></div>
+      <div class="info-row"><div class="info-icon">📍</div><div><div class="info-label">Address</div><div class="info-val">225 E 18th St<br>Antioch, CA 94509</div><a href="https://maps.google.com/?q=225+E+18th+St+Antioch+CA+94509" target="_blank" rel="noopener" class="info-link" style="margin-top:.3rem;display:inline-block">Get directions →</a></div></div>
+      <div class="info-row"><div class="info-icon">⭐</div><div><div class="info-label">Reviews &amp; social</div><div class="social-row" style="margin-top:.35rem">
+        <a class="social-btn yelp" href="https://www.yelp.com/biz/blue-line-smog-antioch?override_cta=Get+pricing+%26+availability&ylpcid=09668748934f4f9984eafc732bfbc21b5a8dcf26" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.16 12.73l-4.7 1.18a1.27 1.27 0 0 1-1.52-1.63l1.8-4.55a.6.6 0 0 1 .92-.28c1.58 1.1 4.47 3.57 4.13 4.57a.6.6 0 0 1-.63.71zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.16 15.34c-.3.9-2.06 1.55-3.07 1.63a.6.6 0 0 1-.63-.55l-.36-4.86a1.27 1.27 0 0 1 2.08-.94l2.4 3.87a.6.6 0 0 1-.42.85zm-8.55.42c-1-.12-2.68-.9-2.9-1.82a.6.6 0 0 1 .36-.7l4.42-1.65a1.27 1.27 0 0 1 1.62 1.52l-1.1 2.97a.6.6 0 0 1-.7.37 8.85 8.85 0 0 1-1.7-.69zm-1.75-7.17c.35-1 3.2-3.4 4.77-4.44a.6.6 0 0 1 .9.3l1.65 4.6a1.27 1.27 0 0 1-1.56 1.6L6.05 11.3a.6.6 0 0 1-.19-.71z"/></svg>Yelp reviews</a>
+        <a class="social-btn facebook" href="https://www.facebook.com/people/Blueline-Smog/61590550242968/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.955.93-1.955 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Facebook</a>
+      </div></div></div>
+    </div>
+    <div class="info-box anim-right delay-2">
+      <div class="info-box-title">Business hours</div>
+      <table class="hours-table"><tbody>
+        <tr><td>Monday</td><td>9:00 AM – 6:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>9:00 AM – 6:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>9:00 AM – 6:00 PM</td></tr>
+        <tr><td>Thursday</td><td>9:00 AM – 6:00 PM</td></tr>
+        <tr><td>Friday</td><td>9:00 AM – 6:00 PM</td></tr>
+        <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+</div></div>
+<div class="badge-strip"><div class="badge-strip-inner">
+  <span class="badge"><span class="badge-dot"></span> BAR Licensed</span>
+  <span class="badge"><span class="badge-dot"></span> STAR Certified</span>
+  <span class="badge"><span class="badge-dot"></span> Test Only Station</span>
+  <span class="badge"><span class="badge-dot"></span> Electronic DMV Reporting</span>
+  <span class="badge"><span class="badge-dot"></span> Walk-ins Welcome</span>
+  <span class="badge"><span class="badge-dot"></span> Avg. 20–30 Min</span>
+  <span class="badge"><span class="badge-dot"></span> Locally Owned</span>
+</div></div>
+<div class="final-cta">
+  <img class="final-cta-bg" src="images/nova-smoke.jpg" alt="" aria-hidden="true">
+  <div class="final-cta-overlay"></div>
+  <div class="final-cta-inner">
+    <h2 class="anim-up">Ready to get your smog done?</h2>
+    <p class="anim-up delay-1">Walk in any time — no appointment needed.<br>225 E 18th St, Antioch · Mon–Sat 9 AM–6 PM</p>
+    <a href="tel:+19254450970" class="final-cta-phone anim-up delay-2">(925) 445-0970</a>
+    <div class="anim-up delay-3"><a href="tel:+19254450970" class="btn-primary">📞 Call us now</a></div>
+  </div>
+</div>
+<div class="social-footer"><div class="social-footer-inner">
+  <a class="social-footer-btn yelp" href="https://www.yelp.com/biz/blue-line-smog-antioch?override_cta=Get+pricing+%26+availability&ylpcid=09668748934f4f9984eafc732bfbc21b5a8dcf26" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.16 12.73l-4.7 1.18a1.27 1.27 0 0 1-1.52-1.63l1.8-4.55a.6.6 0 0 1 .92-.28c1.58 1.1 4.47 3.57 4.13 4.57a.6.6 0 0 1-.63.71zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.16 15.34c-.3.9-2.06 1.55-3.07 1.63a.6.6 0 0 1-.63-.55l-.36-4.86a1.27 1.27 0 0 1 2.08-.94l2.4 3.87a.6.6 0 0 1-.42.85zm-8.55.42c-1-.12-2.68-.9-2.9-1.82a.6.6 0 0 1 .36-.7l4.42-1.65a1.27 1.27 0 0 1 1.62 1.52l-1.1 2.97a.6.6 0 0 1-.7.37 8.85 8.85 0 0 1-1.7-.69zm-1.75-7.17c.35-1 3.2-3.4 4.77-4.44a.6.6 0 0 1 .9.3l1.65 4.6a1.27 1.27 0 0 1-1.56 1.6L6.05 11.3a.6.6 0 0 1-.19-.71z"/></svg>Read our Yelp reviews</a>
+  <a class="social-footer-btn facebook" href="https://www.facebook.com/people/Blueline-Smog/61590550242968/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.955.93-1.955 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Follow on Facebook</a>
+  <a class="social-footer-btn maps" href="https://maps.google.com/?q=225+E+18th+St+Antioch+CA+94509" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>225 E 18th St, Antioch</a>
+</div></div>
+<footer><div class="footer-inner">
+  <span>© <span id="copy-yr"></span> Blue Line Smog LLC · 225 E 18th St, Antioch, CA 94509 · (925) 445-0970 · BAR Lic. #[LICENSE NUMBER]</span>
+  <div class="footer-links">
+    <a href="https://www.yelp.com/biz/blue-line-smog-antioch?override_cta=Get+pricing+%26+availability&ylpcid=09668748934f4f9984eafc732bfbc21b5a8dcf26" target="_blank" rel="noopener">Yelp</a>
+    <a href="https://www.facebook.com/people/Blueline-Smog/61590550242968/" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://maps.google.com/?q=225+E+18th+St+Antioch+CA+94509" target="_blank" rel="noopener">Map</a>
+    <a href="#hours">Hours</a>
+  </div>
+</div></footer>
+<script>(function(){var yr=document.getElementById('copy-yr');if(yr)yr.textContent=new Date().getFullYear();var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];var today=days[new Date().getDay()];document.querySelectorAll('.hours-table tr').forEach(function(r){if(r.cells[0]&&r.cells[0].textContent.trim()===today)r.classList.add('today');});var bc=document.getElementById('barcode');if(bc){var p=[3,1,4,1,5,9,2,6,5,3,5,8,9,7,9,3,2,3,8,4];bc.innerHTML=p.map(function(w,i){return'<span style="width:'+w+'px;height:'+(18+(w%3)*6)+'px;opacity:'+(0.6+(i%3)*0.13).toFixed(2)+'"></span>';}).join('');}if('IntersectionObserver'in window){var targets=document.querySelectorAll('.anim-left,.anim-right,.anim-up,.anim-scale,.divider');var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in-view');obs.unobserve(e.target);}});},{threshold:0.15});targets.forEach(function(el){obs.observe(el);});}else{document.querySelectorAll('.anim-left,.anim-right,.anim-up,.anim-scale').forEach(function(el){el.style.opacity='1';});document.querySelectorAll('.divider').forEach(function(el){el.style.width='3rem';});}})();</script>
+<div class="fcf-credit"><a href="https://fogcity.co/tech" target="_blank" rel="noopener" title="Built by Fog City Fotografi">FCF</a></div>
+</body>
+</html>
